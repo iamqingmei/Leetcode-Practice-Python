@@ -28,17 +28,25 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
         """
-        if (root): 
-            inverting(root)
+            
+        inverting(root)
         return root
 
 def inverting(root):
-    if root.left==None and root.right == None: 
+    if root == None:
         return
-    if (root.left):
-        inverting (root.left)
-    if (root.right):
-        inverting (root.right)
+    inverting (root.left)
+    inverting (root.right)
     temp = root.left
     root.left = root.right
     root.right = temp
+
+
+    def invertTree2(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if root:
+            root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+        return root

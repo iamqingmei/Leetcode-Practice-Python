@@ -13,3 +13,6 @@ class Solution(object):
         :rtype: str
         """
         return "".join(reversed(list(s)))
+
+    def reverseString(self, s):
+        return s[::-1]

@@ -24,7 +24,7 @@ return its bottom-up level order traversal as:
 #         self.right = None
 
 class Solution(object):
-    def levelOrderBottom(self, root):
+    def levelOrderBottom(self, root): #75 ms 24%
         if not root:
             return []
 
